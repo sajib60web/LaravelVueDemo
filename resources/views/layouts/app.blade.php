@@ -46,11 +46,7 @@
                             <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Post List') }}</a>
                         </li>
                         <li class="nav-item">
-<<<<<<< HEAD
                             <a class="nav-link" href="{{ route('components') }}">Child Component To Parent Component</a>
-=======
-                            <a class="nav-link" href="{{ route('members') }}">{{ __('Member List') }}</a>
->>>>>>> b3e4a39adaf27e3ca6ef1239f692e25655e50a89
                         </li>
                         @endif
                     </ul>
