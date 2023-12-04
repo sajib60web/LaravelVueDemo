@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ComponentController;
 use App\Http\Controllers\Api\CustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('customers', CustomerController::class);
 Route::get('search/customer/{field}/{query}', [CustomerController::class, 'search']);
+
+Route::apiResource('components', ComponentController::class);

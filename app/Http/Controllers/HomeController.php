@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('pages.customers');
     }
+
+    public function components()
+    {
+        return view('pages.components');
+    }
 }
