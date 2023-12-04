@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,4 @@ Route::get('/customers', [HomeController::class, 'customers'])->name('customers'
 Route::get('/components', [HomeController::class, 'components'])->name('components');
 
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('members', [MemberController::class, 'index'])->name('members');
