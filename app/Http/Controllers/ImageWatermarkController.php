@@ -38,7 +38,7 @@ class ImageWatermarkController extends Controller
             $watermark = Image::make('assets/image_watermark/watermark/watermark2.png');
             $watermark->resize(640, 90);
             // Opacity With
-            // $watermark = Image::make('assets/image_watermark/watermark/watermark2.png')->opacity(50);
+            // $watermark = $watermark->opacity(50);
             $image_resize->insert($watermark, 'bottom-right');
             //End Watermark
 
