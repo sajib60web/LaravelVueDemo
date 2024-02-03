@@ -51,6 +51,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('image_watermark.index') }}">Image Watermark</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('import_excel.index') }}">Import Excel</a>
+                        </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->

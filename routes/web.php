@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageWatermarkController;
+use App\Http\Controllers\ImportExcelController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
@@ -32,3 +33,4 @@ Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('members', [MemberController::class, 'index'])->name('members');
 Route::get('image_watermark', [MemberController::class, 'index'])->name('members');
 Route::resource('image_watermark', ImageWatermarkController::class);
+Route::resource('import_excel', ImportExcelController::class);
