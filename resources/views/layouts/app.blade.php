@@ -48,6 +48,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('components') }}">Child Component To Parent Component</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('image_watermark.index') }}">Image Watermark</a>
+                        </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->
