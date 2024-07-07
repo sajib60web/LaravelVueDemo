@@ -28,6 +28,10 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/customers', [HomeController::class, 'customers'])->name('customers');
 Route::get('/components', [HomeController::class, 'components'])->name('components');
+Route::get('/bootstrap-vue', [HomeController::class, 'bootstrapVue'])->name('bootstrap.vue');
+Route::get('/bootstrap-vue', [HomeController::class, 'bootstrapVue'])->name('bootstrap.vue');
+Route::get('/shift', [HomeController::class, 'shift'])->name('shift');
+Route::get('/shift-data', [HomeController::class, 'shiftData'])->name('shift.data');
 
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('members', [MemberController::class, 'index'])->name('members');

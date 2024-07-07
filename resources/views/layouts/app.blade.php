@@ -54,6 +54,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('import_excel.index') }}">Import Excel</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('bootstrap.vue') }}">Bootstrap Vue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('shift') }}">Shift</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('shift.data') }}">Shift Data</a>
+                        </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->

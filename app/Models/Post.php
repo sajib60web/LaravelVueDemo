@@ -17,4 +17,22 @@ class Post extends Model
     protected $fillable = [
         'title', 'body', 'slug'
     ];
+
+    public function scopeMorning($query)
+    {
+        return $query->whereTime('created_at', '>=', '05:00:00')
+            ->whereTime('created_at', '<=', '11:59:59');
+    }
+
+    public function scopeAfternoon($query)
+    {
+        return $query->whereTime('created_at', '>=', '12:00:00')
+            ->whereTime('created_at', '<=', '17:59:59');
+    }
+
+    public function scopeEvening($query)
+    {
+        return $query->whereTime('created_at', '>=', '18:00:00')
+            ->orWhereTime('created_at', '<=', '04:59:59');
+    }
 }

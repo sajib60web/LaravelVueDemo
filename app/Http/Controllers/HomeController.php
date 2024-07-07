@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Helpers\TimeHelper;
+use App\Models\Post;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -34,5 +37,31 @@ class HomeController extends Controller
     public function components()
     {
         return view('pages.components');
+    }
+
+    public function bootstrapVue()
+    {
+        return view('pages.bootstrap_vue');
+    }
+
+    public function shift()
+    {
+        $timeOfDay = TimeHelper::getTimeOfDay();
+        return view('pages.shift', compact('timeOfDay'));
+    }
+
+    public function shiftData()
+    {
+        $currentTime = Carbon::now();
+        $hour = $currentTime->hour;
+        if ($hour >= 5 && $hour < 12) {
+            $posts = Post::morning()->get();
+        } elseif ($hour >= 12 && $hour < 18) {
+            $posts = Post::afternoon()->get();
+        } else {
+            $posts = Post::evening()->get();
+        }
+        $timeOfDay = TimeHelper::getTimeOfDay();
+        return view('pages.shift_data', compact('posts', 'timeOfDay'));
     }
 }
