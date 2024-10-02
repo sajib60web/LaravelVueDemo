@@ -64,4 +64,9 @@ class HomeController extends Controller
         $timeOfDay = TimeHelper::getTimeOfDay();
         return view('pages.shift_data', compact('posts', 'timeOfDay'));
     }
+
+    public function tabComponent()
+    {
+        return view('pages.tab_component');
+    }
 }

@@ -63,6 +63,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('shift.data') }}">Shift Data</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('tab.component') }}">Tab Component</a>
+                        </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->

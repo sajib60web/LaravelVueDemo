@@ -32,6 +32,7 @@ Route::get('/bootstrap-vue', [HomeController::class, 'bootstrapVue'])->name('boo
 Route::get('/bootstrap-vue', [HomeController::class, 'bootstrapVue'])->name('bootstrap.vue');
 Route::get('/shift', [HomeController::class, 'shift'])->name('shift');
 Route::get('/shift-data', [HomeController::class, 'shiftData'])->name('shift.data');
+Route::get('/tab/component', [HomeController::class, 'tabComponent'])->name('tab.component');
 
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('members', [MemberController::class, 'index'])->name('members');

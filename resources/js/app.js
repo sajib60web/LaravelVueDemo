@@ -17,4 +17,7 @@ app.component("child-component-to-parent-component",ChildComponentToParentCompon
 import BootstrapVueComponent from "./components/BootstrapVueComponent.vue";
 app.component("bootstrap-vue-component", BootstrapVueComponent);
 
+import TabComponent from "./components/tabs/TabComponent.vue";
+app.component("tab-component", TabComponent);
+
 app.mount("#app");
