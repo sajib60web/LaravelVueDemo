@@ -16,6 +16,6 @@
         "vue": "^3.4.27"
     },
     "dependencies": {
-        "bootstrap-vue": "^2.23.1"
+        "@fawmi/vue-google-maps": "^0.9.79"
     }
 }

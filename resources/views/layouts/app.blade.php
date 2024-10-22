@@ -66,6 +66,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('tab.component') }}">Tab Component</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('google.map.autocomplete.vue') }}">Google Map Autocomplete Vue</a>
+                        </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->

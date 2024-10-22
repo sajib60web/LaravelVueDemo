@@ -69,4 +69,9 @@ class HomeController extends Controller
     {
         return view('pages.tab_component');
     }
+
+    public function googleMapAutocompleteVue()
+    {
+        return view('pages.google_map_autocomplete');
+    }
 }
