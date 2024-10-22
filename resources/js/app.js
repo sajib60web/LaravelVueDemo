@@ -30,7 +30,7 @@ app.component("open-ai-component", OpenAiComponent);
 
 
 // config
-import config from "./config";
+import config from "./config.js";
 window.config = config;
 
 // google map
