@@ -74,4 +74,9 @@ class HomeController extends Controller
     {
         return view('pages.google_map_autocomplete');
     }
+
+    public function openAi()
+    {
+        return view('pages.openAi');
+    }
 }

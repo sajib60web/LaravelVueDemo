@@ -25,11 +25,18 @@ app.component("tab-component", TabComponent);
 import GoogleMapAutocompleteComponent from "./components/GoogleMapAutocompleteComponent.vue";
 app.component("google-map-autocomplete", GoogleMapAutocompleteComponent);
 
+import OpenAiComponent from "./components/OpenAiComponent.vue";
+app.component("open-ai-component", OpenAiComponent);
+
+
+// config
+import config from "./config";
+window.config = config;
 
 // google map
 app.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyBxwyLXWNfom9BRx0Ccr_PdIzDCHyKDeNo',
+        key: config.GOOGLE_MAPS_API_KEY,
         libraries: 'places',
         async: true,
         defer: true,

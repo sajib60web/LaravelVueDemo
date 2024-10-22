@@ -16,6 +16,7 @@
         "vue": "^3.4.27"
     },
     "dependencies": {
-        "@fawmi/vue-google-maps": "^0.9.79"
+        "@fawmi/vue-google-maps": "^0.9.79",
+        "openai": "^4.68.1"
     }
 }

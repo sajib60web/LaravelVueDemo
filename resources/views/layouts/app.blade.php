@@ -25,8 +25,8 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -39,36 +39,39 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         @if (Auth::check())
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('customers') }}">{{ __('Customer List') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Post List') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('components') }}">Child Component To Parent Component</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('image_watermark.index') }}">Image Watermark</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('import_excel.index') }}">Import Excel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bootstrap.vue') }}">Bootstrap Vue</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shift') }}">Shift</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shift.data') }}">Shift Data</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('tab.component') }}">Tab Component</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('google.map.autocomplete.vue') }}">Google Map Autocomplete Vue</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customers') }}">{{ __('Customer List') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Post List') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('components') }}">Child Component To Parent Component</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('image_watermark.index') }}">Image Watermark</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('import_excel.index') }}">Import Excel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('bootstrap.vue') }}">Bootstrap Vue</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('shift') }}">Shift</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('shift.data') }}">Shift Data</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tab.component') }}">Tab Component</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('google.map.autocomplete.vue') }}">Google Map Autocomplete Vue</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('openAi') }}">Open Ai</a>
+                            </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->
@@ -76,31 +79,31 @@
                         <!-- Authentication Links -->
                         @guest
                         @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
                         @endif
                         @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
                         @endif
                         @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
                         @endguest
                     </ul>
                 </div>
