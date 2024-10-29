@@ -72,6 +72,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('openAi') }}">Open Ai</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('upload.index') }}">File Upload</a>
+                            </li>
                         @endif
                     </ul>
                     <!-- Right Side Of Navbar -->

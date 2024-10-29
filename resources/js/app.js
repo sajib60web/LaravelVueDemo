@@ -28,6 +28,9 @@ app.component("google-map-autocomplete", GoogleMapAutocompleteComponent);
 import OpenAiComponent from "./components/OpenAiComponent.vue";
 app.component("open-ai-component", OpenAiComponent);
 
+import FileUploadComponent from "./components/FileUploadComponent.vue";
+app.component("file-upload-component", FileUploadComponent);
+
 
 // config
 import config from "./config.js";

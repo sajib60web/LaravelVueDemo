@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageWatermarkController;
 use App\Http\Controllers\ImportExcelController;
@@ -41,3 +42,6 @@ Route::get('members', [MemberController::class, 'index'])->name('members');
 Route::get('image_watermark', [MemberController::class, 'index'])->name('members');
 Route::resource('image_watermark', ImageWatermarkController::class);
 Route::resource('import_excel', ImportExcelController::class);
+
+
+Route::get('/file/upload', [FileUploadController::class, 'index'])->name('upload.index');

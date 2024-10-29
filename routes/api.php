@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ComponentController;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\FileUploadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::apiResource('customers', CustomerController::class);
 Route::get('search/customer/{field}/{query}', [CustomerController::class, 'search']);
 
 Route::apiResource('components', ComponentController::class);
+
+
+Route::post('/upload', [FileUploadController::class, 'upload']);
